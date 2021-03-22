@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="aday.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> 
+    <title>A day</title>
+</head>
+<body onload=notreDate();> <!-- Pour éviter le print show date on refresh ici-->
+    <div id = "day">
+    <h1>Hello World!</h1C>
+        <h2>👇</h2>
+    <button class="button" type="button" onclick="random_bg_color()">Cliquez </button>
+    <br>  
+        <span id='horloge' ></span>
+    
+</div>
+    
+    <script>
+      <!-- ON CHANGE LE BACKGROUND>
+      function random_bg_color() {
+    var a= Math.floor(Math.random() * 256);<!-- floor pour arrondir si jamais notre nombre est un float>
+    var b= Math.floor(Math.random() * 256);
+    var c= Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + a + "," + b + "," + c + ")";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
+
+function refresh(){
+             var time = 1000; 
+             setTimeout('notreDate()',time)
+         }
+         
+         function notreDate() {
+             var date = new Date()
+             var h = date.getHours();
+             var m = date.getMinutes();
+             var s = date.getSeconds();
+             if( h < 10 ){ h = '0' + h; }
+             if( m < 10 ){ m = '0' + m; }
+             if( s < 10 ){ s = '0' + s; }
+             var time = h + ':' + m + ':' + s
+             document.getElementById('horloge').innerHTML = time;
+             refresh();
+          }
+
+    </script>
+</body>
+</html>
