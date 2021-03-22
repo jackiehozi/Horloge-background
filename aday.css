@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+    background-color: rgb(30, 30, 184);
+    font-size: 40px;
+    color: yellow;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+  div {
+    
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count:4
+  
+  }
+  
+  @keyframes example {
+    0%  {background-color:rgb(228, 228, 197); left:200px; top:0px;}
+    25%  {background-color:rgb(145, 145, 93); left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+.button{
+  font-size : 24px;
+background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  color:black;
+  border-radius: 40px;
+  padding:10px;
+   font-family: 'DotGothic16', sans-serif;
+}
